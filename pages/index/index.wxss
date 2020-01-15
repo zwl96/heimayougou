@@ -15,3 +15,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.nav{
+  display: flex;
+  background-color: #aaa;
+
+}
+.nav-c{
+  flex: 1;
+  text-align: center;
+}

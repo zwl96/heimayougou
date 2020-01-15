@@ -1,6 +1,11 @@
 <view class="searchInput">
   <!-- 搜索 -->
   <view class="searchConter">
-    搜索
+    {{ searchText }}
   </view>
+</view>
+
+
+<view class="nav">
+  <view class="nav-c" wx:for='{{nav}}' wx:key='id'        wx:for-item='v' wx:for-index='i'>{{v.name}}</view>
 </view>

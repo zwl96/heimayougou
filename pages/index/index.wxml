@@ -1,3 +1,6 @@
-<view>
-  
+<view class="searchInput">
+  <!-- 搜索 -->
+  <view class="searchConter">
+    搜索
+  </view>
 </view>

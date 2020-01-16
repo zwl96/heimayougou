@@ -1,11 +1,15 @@
-<view class="searchInput">
-  <!-- 搜索 -->
-  <view class="searchConter">
-    {{ searchText }}
-  </view>
+<view>
+  <searchInput/>
 </view>
 
-
-<view class="nav">
-  <view class="nav-c" wx:for='{{nav}}' wx:key='id'        wx:for-item='v' wx:for-index='i'>{{v.name}}</view>
+<!-- 轮播图 开始 -->
+<view class="index_swiper">
+  <swiper indicator-dots="true" autoplay="true" circular="true">
+    <swiper-item wx:for="{{swiper_list}}" wx:key="goods_id">
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
 </view>
+<!-- 轮播图 结束 -->

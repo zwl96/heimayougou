@@ -1,0 +1,6 @@
+<view class="searchInput">
+  <!-- 搜索 -->
+  <view class="searchConter">
+    {{ searchText }}
+  </view>
+</view>

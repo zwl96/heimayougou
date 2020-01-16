@@ -8,3 +8,11 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+@import "/assets/styles/iconfont.wxss";
+page,view,text,navigator {
+  margin: 0rpx;
+  padding: 0rpx;
+  box-sizing: border-box;
+
+}

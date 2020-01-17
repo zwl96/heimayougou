@@ -13,3 +13,15 @@
   </swiper>
 </view>
 <!-- 轮播图 结束 -->
+
+<!-- 分类 开始 -->
+<view class="classification">
+  <view>
+    <view wx:for='{{classification_list}}' wx:key='id'>
+      <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+        <image src="{{item.image_src}}" mode="widthFix"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- 分类 结束 -->

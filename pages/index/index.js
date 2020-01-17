@@ -11,7 +11,8 @@ Page({
       { id: 4, name: '工具' }
     ],
     flag: true,
-    swiper_list: []
+    swiper_list: [],
+    classification_list:[]
   },
 
   /**
@@ -21,11 +22,21 @@ Page({
     wx.request({
       url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
       success: (res) => {
+        // console.log(res)
         this.setData({
           swiper_list: res.data.message
         })
       }
-    })
+    }),
+      wx.request({
+        url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
+        success: (res) => {
+          // console.log(res)
+          this.setData({
+            classification_list: res.data.message
+          })
+        }
+      })
   },
 
   /**

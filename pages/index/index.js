@@ -12,7 +12,8 @@ Page({
     ],
     flag: true,
     swiper_list: [],
-    classification_list:[]
+    classification_list: [],
+    storey_list:[]
   },
 
   /**
@@ -34,6 +35,15 @@ Page({
           // console.log(res)
           this.setData({
             classification_list: res.data.message
+          })
+        }
+      }),
+      wx.request({
+        url: 'https://api.zbztb.cn/api/public/v1/home/floordata',
+        success: (res) => {
+          console.log(res)
+          this.setData({
+            storey_list: res.data.message
           })
         }
       })

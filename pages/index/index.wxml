@@ -17,7 +17,7 @@
 <!-- 分类 开始 -->
 <view class="classification">
   <view>
-    <view wx:for='{{classification_list}}' wx:key='id'>
+    <view wx:for='{{classification_list}}' wx:key='index'>
       <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
         <image src="{{item.image_src}}" mode="widthFix"></image>
       </navigator>
@@ -25,3 +25,21 @@
   </view>
 </view>
 <!-- 分类 结束 -->
+
+<!-- 楼层 开始 -->
+<view class="storey">
+  <view>
+    <view wx:for='{{storey_list}}' wx:key='index'>
+      <view class="storey-title">
+        <image src="{{item.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+
+      <view wx:for="{{item.product_list}}" wx:for-item="v" wx:for-index="i" wx:key='i'>
+        <navigator class="storey_product" url='{{v.navigator_url}}' open-type="{{v.open_type}}">
+          <image src="{{v.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 楼层 结束 -->

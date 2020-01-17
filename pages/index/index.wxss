@@ -9,6 +9,7 @@
 
 .classification {
   margin-top: 10rpx;
+  margin-bottom: 50rpx;
 }
 .classification view {
   display: flex;
@@ -20,3 +21,5 @@
   width: 128rpx;
   height: 140rpx;
 }
+
+
